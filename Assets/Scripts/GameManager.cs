@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         repeatBuildingTime = 2 / FindObjectOfType<AccelerateGame>().gameAcceleration;
-        distanceTraveled += Time.deltaTime * FindObjectOfType<AccelerateGame>().gameAcceleration;
+        distanceTraveled += Time.deltaTime * FindObjectOfType<AccelerateGame>().gameAcceleration * 5;
         FindObjectOfType<GamePlayInformation>().UpdateDistance(distanceTraveled.ToString("f0"));    
     }
     public IEnumerator StartBuilding()
@@ -31,6 +31,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

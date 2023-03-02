@@ -11,6 +11,7 @@ public class BreakWall : MonoBehaviour
         {
             collision.gameObject.SetActive(false);  
             gameObject.SetActive(false);
+            FindObjectOfType<GamePlayInformation>().UpdateBrokenWalls();
         }
     }
 }
