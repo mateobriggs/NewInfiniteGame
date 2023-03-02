@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PowerManager : MonoBehaviour
 {
-    public int bullets;
+    public int bullets = 2;
     public Rigidbody2D bullet;
     public float force;
 
@@ -23,6 +23,10 @@ public class PowerManager : MonoBehaviour
             }
         }
         else return; 
-        
+    }
+
+    public void CrossWall()
+    {
+
     }
 }
