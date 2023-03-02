@@ -13,6 +13,10 @@ public class AccelerateGame : MonoBehaviour
 
     void Update()
     {
-        gameAcceleration += Time.deltaTime * 0.01f;
+        if (gameAcceleration < 2)
+        {
+            gameAcceleration += Time.deltaTime * 0.01f;
+        }
+        else gameAcceleration = 2;
     }
 }
