@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class InfiniteFloors : MonoBehaviour
+{
+    private Vector3 newFloorPosition;
+    public List<GameObject> floorList = new List<GameObject>();
+    public int positionInX;
+
+    public void BuildNewFloor()
+    {
+        for (float i = -4.5f; i < 2.2; i += 3.25f)
+        {
+            int listItem;
+            listItem = Random.Range(0, 4);
+            newFloorPosition = new Vector3(positionInX, i, 0);
+            GameObject newFloor = Instantiate(floorList[listItem], newFloorPosition, Quaternion.identity);
+        }
+    }
+}
