@@ -114,4 +114,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1610bdb3fbf30574a8695f72b8e9f542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDeactivate: 10
+  timeToDeactivate: 5
+  magnetSprite: {fileID: 8699370251658308193}
