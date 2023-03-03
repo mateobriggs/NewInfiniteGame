@@ -14,7 +14,7 @@ public class GoUp : MonoBehaviour
             if (Physics2D.OverlapCircle(transform.position + Vector3.down * offset, radius, floorMask))
             {
                 Vector3 position = transform.position;
-                float distanceToClimb = 3.40f;
+                float distanceToClimb = 3.26f;
                 transform.position = position + new Vector3(0, distanceToClimb, 0);
             }    
         }

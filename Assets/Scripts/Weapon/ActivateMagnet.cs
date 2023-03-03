@@ -6,6 +6,7 @@ using UnityEngine;
 public class ActivateMagnet : MonoBehaviour
 {
     public float timeToDeactivate;
+    public SpriteRenderer magnetSprite;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name == "Player")
@@ -13,7 +14,10 @@ public class ActivateMagnet : MonoBehaviour
             
             collision.gameObject.transform.GetChild(1).gameObject.SetActive(true);
             collision.gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            collision.gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            collision.gameObject.transform.GetChild(4).gameObject.SetActive(true);
             StartCoroutine(DeactivateMagnet(collision.gameObject));
+            magnetSprite.enabled = false;    
         }
     }
 
@@ -22,6 +26,8 @@ public class ActivateMagnet : MonoBehaviour
         yield return new WaitForSeconds(timeToDeactivate);
         player.transform.GetChild(1).gameObject.SetActive(false);
         player.transform.GetChild(2).gameObject.SetActive(false);
+        player.transform.GetChild(3).gameObject.SetActive(false);
+        player.transform.GetChild(4).gameObject.SetActive(false);
         print("magnet desactivado");
     }
 }

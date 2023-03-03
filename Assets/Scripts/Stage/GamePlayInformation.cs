@@ -51,7 +51,6 @@ public class GamePlayInformation : MonoBehaviour
     public void UpdateBrokenWalls()
     {
         brokenWalls++;
-        print(brokenWalls);
     }
 
     private void Update()

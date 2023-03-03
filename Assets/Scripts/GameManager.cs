@@ -9,22 +9,28 @@ public class GameManager : MonoBehaviour
     public float startBuildingTime;
     public float repeatBuildingTime;
     private float distanceTraveled;
+    private InfiniteFloors infiniteFloors;
+    private AccelerateGame accelerateGame;
+    private GamePlayInformation gamePlayInformation;
     void Start()
     {
+        infiniteFloors = FindObjectOfType<InfiniteFloors>();
+        accelerateGame = FindObjectOfType<AccelerateGame>();
+        gamePlayInformation = FindObjectOfType<GamePlayInformation>();
         StartCoroutine("StartBuilding");
     }
 
     private void Update()
     {
-        repeatBuildingTime = 2 / FindObjectOfType<AccelerateGame>().gameAcceleration;
-        distanceTraveled += Time.deltaTime * FindObjectOfType<AccelerateGame>().gameAcceleration * 5;
-        FindObjectOfType<GamePlayInformation>().UpdateDistance(distanceTraveled.ToString("f0"));    
+        repeatBuildingTime = 2 / accelerateGame.gameAcceleration;
+        distanceTraveled += Time.deltaTime * accelerateGame.gameAcceleration * 5;
+        gamePlayInformation.UpdateDistance(distanceTraveled.ToString("f0"));    
     }
     public IEnumerator StartBuilding()
     {
         while (true)
         {
-            FindObjectOfType<InfiniteFloors>().BuildNewFloor();
+            infiniteFloors.BuildNewFloor();
             yield return new WaitForSeconds(repeatBuildingTime);
         }
     }
