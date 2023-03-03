@@ -11,6 +11,7 @@ public class GamePlayInformation : MonoBehaviour
     public TextMeshProUGUI bulletsText;
     public TextMeshProUGUI distanceTraveledText;
     public int brokenWalls;
+    public bool doubleScore = false;
 
     public static GamePlayInformation gamePlayInformation;
     private void Awake()
@@ -51,6 +52,11 @@ public class GamePlayInformation : MonoBehaviour
     public void UpdateBrokenWalls()
     {
         brokenWalls++;
+    }
+
+    public void DoubleScore()
+    {
+        doubleScore = true;
     }
 
     private void Update()

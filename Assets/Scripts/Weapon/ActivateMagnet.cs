@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ActivateMagnet : MonoBehaviour
 {
-    public float timeToDeactivate;
+    private float timeToDeactivate = 5;
     public SpriteRenderer magnetSprite;
     private void OnTriggerEnter2D(Collider2D collision)
     {

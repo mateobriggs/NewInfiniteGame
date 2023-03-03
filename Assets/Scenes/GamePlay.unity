@@ -328,6 +328,7 @@ MonoBehaviour:
   bulletsText: {fileID: 1161677735}
   distanceTraveledText: {fileID: 609343710}
   brokenWalls: 0
+  doubleScore: 0
 --- !u!114 &250663051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,7 +988,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480630064}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1722,6 +1723,18 @@ PrefabInstance:
     - target: {fileID: 3706320613114461908, guid: 2ab7c2f9645383847a33064f655a25b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706320613114461909, guid: 2ab7c2f9645383847a33064f655a25b5, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706320613114461909, guid: 2ab7c2f9645383847a33064f655a25b5, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706320613114461910, guid: 2ab7c2f9645383847a33064f655a25b5, type: 3}
+      propertyPath: jumpForce
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3706320613114461911, guid: 2ab7c2f9645383847a33064f655a25b5, type: 3}
       propertyPath: inputActions.Array.size

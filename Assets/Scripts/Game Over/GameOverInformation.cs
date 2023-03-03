@@ -11,28 +11,25 @@ public class GameOverInformation : MonoBehaviour
     public string totalCoins;
     public int totalScore;
     private int totalBrokenWalls;
+    private bool doubleScore;
 
     public List<TextMeshProUGUI> texts;
     public Button restartButton;
-
-    /*public TextMeshProUGUI totalDistanceText;
-    public TextMeshProUGUI totalCoinsText;
-    public TextMeshProUGUI totalScoreText;*/
     
     
     void Start()
     {
-        totalCoins = FindObjectOfType<GamePlayInformation>().coinsText.text;
-        totalDistance = FindObjectOfType<GamePlayInformation>().distanceTraveledText.text;
-        totalBrokenWalls = FindObjectOfType<GamePlayInformation>().brokenWalls;
+        GamePlayInformation gamePlayInformation = FindObjectOfType<GamePlayInformation>();
+        totalCoins = gamePlayInformation.coinsText.text;
+        totalDistance = gamePlayInformation.distanceTraveledText.text;
+        totalBrokenWalls = gamePlayInformation.brokenWalls;
+        doubleScore = gamePlayInformation.doubleScore;
 
-        //texts[0].text = "You collected " + totalCoins + " coins";
-       // texts[1].text = "You ran " + totalDistance + " meters";
         int coinsValue = int.Parse(totalCoins);
         int distanceValue = int.Parse(totalDistance);
-
-        totalScore = coinsValue * 20 + + totalBrokenWalls * 40 + distanceValue;
-        //texts[2].text = "Your Score was " + totalScore.ToString();
+        if (doubleScore) totalScore = (coinsValue * 20 + +totalBrokenWalls * 40 + distanceValue) * 2;
+        else totalScore = coinsValue * 20 + +totalBrokenWalls * 40 + distanceValue;
+        print(doubleScore);
         StartCoroutine(ShowInfo());
     }
 
