@@ -11,13 +11,22 @@ public class ActivateMagnet : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
-            
-            collision.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-            collision.gameObject.transform.GetChild(2).gameObject.SetActive(true);
-            collision.gameObject.transform.GetChild(3).gameObject.SetActive(true);
-            collision.gameObject.transform.GetChild(4).gameObject.SetActive(true);
-            StartCoroutine(DeactivateMagnet(collision.gameObject));
-            magnetSprite.enabled = false;    
+            GameObject magnet = collision.gameObject.transform.GetChild(1).gameObject;
+            if(magnet.activeInHierarchy)
+            {
+                print("no agarra el iman");
+                return;
+            }
+            else
+            {
+                print("agarra el iman");
+                collision.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                collision.gameObject.transform.GetChild(2).gameObject.SetActive(true);
+                collision.gameObject.transform.GetChild(3).gameObject.SetActive(true);
+                collision.gameObject.transform.GetChild(4).gameObject.SetActive(true);
+                StartCoroutine(DeactivateMagnet(collision.gameObject));
+                magnetSprite.enabled = false;
+            }      
         }
     }
 

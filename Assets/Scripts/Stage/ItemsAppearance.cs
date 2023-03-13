@@ -27,7 +27,7 @@ public class ItemsAppearance : MonoBehaviour
         }
         else if (coinProbability > 9f)
         {
-            if (amountOfFloorBuilt % 5 == 0)
+            //if (amountOfFloorBuilt % 5 == 0)
                 gameObject.transform.GetChild(3).gameObject.SetActive(true);
         }
         else if (coinProbability > 0f)
