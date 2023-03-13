@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Lives\AddLives.cs" />
     <Compile Include="Assets\Scripts\Weapon\ActivateReturnWeapon.cs" />
     <Compile Include="Assets\Scripts\Weapon\PlayerGhostFollowPlayer.cs" />
+    <Compile Include="Assets\Scripts\Player Selections\TryColor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\Stage\AvoidWallGlitch.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\Scripts\Lives\KillPlayer.cs" />
     <Compile Include="Assets\Scripts\Stage\DestroyPlataforms.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\Scripts\Special Items\DoubleScore.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -94,18 +96,22 @@
     <Compile Include="Assets\Scripts\Mechanics\GoUp.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\Scripts\Player Selections\SelectCharacter.cs" />
     <Compile Include="Assets\Scripts\Stage\GamePlayInformation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Coins\AttractCoins.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\Player Selections\PlayerSelections.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\Weapon\CollectBullets.cs" />
+    <Compile Include="Assets\Scripts\Player Selections\SelectCharacterMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Weapon\PowerManager.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Weapon\ReturnToInitPos.cs" />
     <Compile Include="Assets\Scripts\Lives\TakeLives.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -118,14 +124,8 @@
     <Compile Include="Assets\Scripts\Mechanics\PlayerJump.cs" />
     <Compile Include="Assets\Scripts\Stage\AvoidDelayGlitch.cs" />
     <Compile Include="Assets\Scripts\Weapon\BreakWall.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Scripts\Special Items\DoubleScore.cs" />
-    <Compile Include="Assets\Scripts\Player Selections\SelectCharacter.cs" />
-    <Compile Include="Assets\Scripts\Player Selections\PlayerSelections.cs" />
-    <Compile Include="Assets\Scripts\Player Selections\SelectCharacterMenu.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\Player Selections\TryColor.cs" />
     <Compile Include="Assets\Scripts\Player Selections\PlayerColor.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

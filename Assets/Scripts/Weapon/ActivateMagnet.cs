@@ -28,6 +28,5 @@ public class ActivateMagnet : MonoBehaviour
         player.transform.GetChild(2).gameObject.SetActive(false);
         player.transform.GetChild(3).gameObject.SetActive(false);
         player.transform.GetChild(4).gameObject.SetActive(false);
-        print("magnet desactivado");
     }
 }

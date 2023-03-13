@@ -6,6 +6,7 @@ public class PlayerSelections : MonoBehaviour
 {
     public Color characterColor;
     private PlayerSelections playerSelections;
+    public bool youSelectAColor = false;
 
     private void Awake()
     {
@@ -19,12 +20,10 @@ public class PlayerSelections : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-        //print(playerSelections.characterColor);
     }
 
     public Color SaveChosenColor()
     {
-        print(characterColor);
         return characterColor;
     }
 }
